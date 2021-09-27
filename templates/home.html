@@ -5,6 +5,18 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Flight Price Prediction</title>
 
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>  
+    <meta charset="UTF-8">
+
+
 
     <!-- BootStrap -->
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css"
@@ -23,7 +35,7 @@
     <nav class="navbar navbar-inverse navbar-fixed-top">
         <div class="container-fluid">
             <div class="navbar-header">
-                <a class="navbar-brand" href="/">FLIGHT PRICE</a>
+                <a class="navbar-brand" href="/" >FLIGHT PRICE</a>
             </div>
         </div>
     </nav>
@@ -32,9 +44,13 @@
 
 
     <div class="container">
+        <div>
+            <div class="bg">
 
-
-
+                <body 
+                background="{{url_for('static',filename = 'images/building.jpg')}}"   bgproperties="fixed"
+                ></body>
+            </div>
         <form action="\predict" method="post">
 
 
@@ -42,7 +58,7 @@
                 <div class="col-sm-6">
                     <div class="card">
                         <div class="card-body">
-                            <h5 class="card-title">Departure Date</h5>
+                            <h5 class="card-title">Departure Time & Date</h5>
                             <!-- Departure -->
                             <input type="datetime-local" name="Dep_Time" id="Dep_Time" required="required">
                         </div>
@@ -54,7 +70,7 @@
                 <div class="col-sm-6">
                     <div class="card">
                         <div class="card-body">
-                            <h5 class="card-title">Arrival Date</h5>
+                            <h5 class="card-title">Arrival Time & Date</h5>
                             <!-- Arrival -->
                             <input type="datetime-local" name="Arrival_Time" id="Arrival_Time" required="required">
                         </div>
@@ -71,7 +87,7 @@
                     <div class="card">
                         <div class="card-body">
                             <!-- Source -->
-                            <h5 class="card-title">Source</h5>
+                            <h5 class="card-title">From</h5>
                             <select name="Source" id="Source" required="required">
                                 <option value="Delhi">Delhi</option>
                                 <option value="Kolkata">Kolkata</option>
@@ -84,7 +100,7 @@
                 <div class="col-sm-6">
                     <div class="card">
                         <div class="card-body">
-                            <h5 class="card-title">Destination</h5>
+                            <h5 class="card-title">To</h5>
                             <!-- Destination -->
                             <select name="Destination" id="Destination" required="required">
                                 <option value="Cochin">Cochin</option>
@@ -108,7 +124,7 @@
                 <div class="col-sm-6">
                     <div class="card">
                         <div class="card-body">
-                            <h5 class="card-title">Stopage</h5>
+                            <h5 class="card-title">No. of Stops</h5>
                             <!-- Total Stops -->
                             <select name="stops" required="required">
                                 <option value="0">Non-Stop</option>
@@ -123,7 +139,7 @@
                 <div class="col-sm-6">
                     <div class="card">
                         <div class="card-body">
-                            <h5 class="card-title">Which Airline you want to travel?</h5>
+                            <h5 class="card-title">Airline</h5>
                             <!-- Airline -->
                             <select name="airline" id="airline" required="required">
                                 <option value="Jet Airways">Jet Airways</option>
@@ -160,10 +176,11 @@
 
         <br>
         <br>
-        <p>©2020 Amar Mandal</p>
+        <p>©2021 Shreyas Kunte</p>
 
     </div>
-
+</div>
+</div>
 
 
 

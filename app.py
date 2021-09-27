@@ -37,6 +37,8 @@ def predict():
         date_arr = request.form["Arrival_Time"]
         Arrival_hour = int(pd.to_datetime(date_arr, format ="%Y-%m-%dT%H:%M").hour)
         Arrival_min = int(pd.to_datetime(date_arr, format ="%Y-%m-%dT%H:%M").minute)
+        if (Journey_day < Arrival_hour):
+            exit
         # print("Arrival : ", Arrival_hour, Arrival_min)
 
         # Duration
